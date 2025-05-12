@@ -89,9 +89,9 @@ This command starts the master process, which spawns multiple worker processes (
 
 ---
 
-## API Endpoints
+## API Endpoints using POSTMAN
 
-### 1. GET /api/users  
+### 1. GET http://localhost:4000/api/users/  
 Retrieve all users.
 
 **Request:**
@@ -105,7 +105,7 @@ GET /api/users
 - **Status**: 200 OK
 - **Body**: An array of user objects (empty array if no users).
 
-### 2. POST /api/users  
+### 2. POST http://localhost:4000/api/users/  
 Create a new user.
 
 **Request:**
@@ -129,7 +129,7 @@ POST /api/users
 - **Status**: 201 Created
 - **Body**: The created user object, including a generated id.
 
-### 3. GET /api/users/{id}  
+### 3. GET http://localhost:4000/api/users/{id}  
 Retrieve a user by their unique ID.
 
 **Request:**
@@ -143,7 +143,7 @@ GET /api/users/{id}
 - **Status**: 200 OK
 - **Body**: The user object.
 
-### 4. PUT /api/users/{id}  
+### 4. PUT http://localhost:4000/api/users/{id}  
 Update a user by their unique ID.
 
 **Request:**
@@ -167,7 +167,7 @@ PUT /api/users/{id}
 - **Status**: 200 OK
 - **Body**: The updated user object.
 
-### 5. DELETE /api/users/{id}  
+### 5. DELETE http://localhost:4000/api/users/{id}  
 Delete a user by their unique ID.
 
 **Request:**
@@ -203,7 +203,7 @@ The test suite includes:
 - Testing the `GET /api/users/{id}` route (retrieving the created user).
 - Testing the `PUT /api/users/{id}` route (updating the user).
 - Testing the `DELETE /api/users/{id}` route (deleting the user).
-- Testing the `GET /api/users/{id}` after deletion (expecting a 404 error).
+
 
 ---
 
@@ -223,6 +223,3 @@ To enable **horizontal scaling**, follow these steps:
 
 ---
 
-## License
-
-This project is licensed under the ISC License.
