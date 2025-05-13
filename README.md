@@ -44,7 +44,7 @@ Before you start, ensure you have the following installed:
 2. Navigate to the project folder:
 
     ```bash
-    cd user-api
+    cd crud-api
     ```
 
 3. Install the dependencies:
