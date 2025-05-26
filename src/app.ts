@@ -1,7 +1,7 @@
 import express from 'express';
 import { getUsers, getUserById, createUser, updateUser, deleteUser } from './controllers/user.controller';
 
-const app = express();
+ const app = express();
 const port = process.env.PORT || 4000;
 
 app.use(express.json()); 
@@ -24,7 +24,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
   res.status(500).json({ message: 'Internal server error' });
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-export { app };
+export { app, server};
